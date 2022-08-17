@@ -1,4 +1,4 @@
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO --> 
 <div align="right">
   <a href="https://github.com/calcom/cal.com">
     <img src="https://cal.com/logo.svg" alt="Logo" width="160" height="65">
