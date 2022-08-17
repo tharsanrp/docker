@@ -56,6 +56,13 @@ jobs:
         push: true
         tags: cypherblare.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_0361b62bbf4a4cebae3e6a4383b672f2 }}/coinbeast-cal:${{ github.sha }}
         file: ./Dockerfile
+        build-args: |
+            NEXT_PUBLIC_WEBAPP_URL=${{ secrets.NEXT_PUBLIC_WEBAPP_URL }}
+            NEXT_PUBLIC_LICENSE_CONSENT=${{ secrets.NEXT_PUBLIC_LICENSE_CONSENT }}
+            CALCOM_TELEMETRY_DISABLE=${{ secrets.CALCOM_TELEMETRY_DISABLE }}
+            NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}
+            CALENDSO_ENCRYPTION_KEY=${{ secrets.CALENDSO_ENCRYPTION_KEY }}
+            DATABASE_URL=${{ secrets.DATABASE_URL }}
 
   deploy:
     runs-on: ubuntu-latest
